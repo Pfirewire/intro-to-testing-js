@@ -10,3 +10,12 @@ function sayHello(name) {
         return `Hello, ${name}.`;
     }
 }
+function isFive(number) {
+    if (typeof number !== "number" || number !== 5) {
+        return false;
+    } else if (number === 5) {
+        return true;
+    } else {
+        return false;
+    }
+}

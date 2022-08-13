@@ -48,3 +48,29 @@ describe("sayHello", function() {
         expect(sayHello("")).toBe("Hello, World.");
     });
 });
+describe("isFive", function () {
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe("function");
+    });
+    it('should return a boolean when called', function () {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return a boolean when executed with null', function () {
+        expect(typeof isFive(null)).toBe("boolean");
+    });
+    it('should return true when executed with 5', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return false when executed with 4', function () {
+        expect(isFive(4)).toBe(false);
+    });
+    it('should return false when executed with 1', function () {
+        expect(isFive(1)).toBe(false);
+    });
+    it('should return false when executed with "5"', function () {
+        expect(isFive("5")).toBe(false);
+    });
+    it('should return false when executed with NaN', function () {
+        expect(isFive(NaN)).toBe(false);
+    });
+});
