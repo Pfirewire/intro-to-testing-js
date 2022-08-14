@@ -112,3 +112,35 @@ describe("isEven", function () {
         expect(isEven(NaN)).toBe(false);
     });
 });
+describe('isVowel', function () {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe("function");
+    });
+    it('should return a boolean when called', function () {
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should return true if executed with "a"', function () {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true if executed with "A"', function () {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false if executed with "y"', function () {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false if executed with 4', function () {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return false if executed with false', function () {
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false if executed with true', function () {
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return false if executed with "banana"', function () {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return false if executed without an argument', function () {
+        expect(isVowel()).toBe(false);
+    });
+});
